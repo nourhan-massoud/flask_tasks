@@ -40,7 +40,7 @@ def index():
         return render_template("index.html",tasks=tasks)
 
 @app.route("/delete/<int:id>")
-def delete():
+def delete(id):
     task_to_delete = todo.query.get_or_404(id)
 
     try:
